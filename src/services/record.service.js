@@ -7,7 +7,6 @@ export class RecordService {
 
     async storeRecord(userId, url) {
         const params = this.generateStoreArgs(userId, url);
-        debugger;
         this.dbClient.putItem(...params, (err, data) => {
             if (err) throw err;
             return data;
@@ -15,7 +14,6 @@ export class RecordService {
     }
 
     scanRecords(userId, url) {
-
     }
 
     generateStoreArgs(userId, url) {
