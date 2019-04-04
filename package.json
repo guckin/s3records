@@ -1,0 +1,30 @@
+{
+  "name": "audio-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "serve": "node ./dist/app.js",
+    "start": "nodemon --exec babel-node ./app.js",
+    "test": "./node_modules/.bin/mocha",
+    "debug:test": "./node_modules/.bin/mocha inspect",
+    "build": "babel src --out-dir ./dist --source-maps",
+    "debug": "node inspect ./dist/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.435.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "sinon": "^7.3.1"
+  }
+}
